@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import Button from "../Button/button";
 import MobileDrawer from "./Drawer";
 import "./styles.css";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [darkMode, setDarkMode] = useState(
@@ -41,11 +42,11 @@ function Header() {
 
   return (
     <div className="header">
-      <a href="/">
+      <Link to="/">
         <h1>
           CryptoTracker<span style={{ color: "var(--blue)" }}>.</span>
         </h1>
-      </a>
+      </Link>
       <div className="links-flex">
         <Switch
           checked={darkMode}
@@ -53,23 +54,23 @@ function Header() {
             changeMode();
           }}
         />
-        <a href="/">
+        <Link to="/">
           <p className="link">Home</p>
-        </a>
-        <a href="/compare">
+        </Link>
+        <Link to="/compare">
           <p className="link">Compare</p>
-        </a>
-        <a href="/watchlist">
+        </Link>
+        <Link to="/watchlist">
           <p className="link">Watchlist</p>
-        </a>
-        <a href="/dashboard">
+        </Link>
+        <Link to="/dashboard">
           <Button
             text="Dashboard"
             onClick={() => {
               console.log("btn-clicked!!!");
             }}
           />
-        </a>
+        </Link>
       </div>
       <MobileDrawer />
     </div>

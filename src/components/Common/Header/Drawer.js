@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import Drawer from "@mui/material/Drawer";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+import { Link } from "react-router-dom";
 
 
 export default function MobileDrawer() {
@@ -44,18 +45,18 @@ export default function MobileDrawer() {
       <MenuRoundedIcon className="link" onClick={() => setFlag(true)} />
       <Drawer anchor={"right"} open={flag} onClose={() => setFlag(false)}>
         <div className="mobile-drawer">
-          <a href="/">
+          <Link to="/">
             <p className="link">Home</p>
-          </a>
-          <a href="/compare">
+          </Link>
+          <Link to="/compare">
             <p className="link">Compare</p>
-          </a>
-          <a href="/watchlist">
+          </Link>
+          <Link to="/watchlist">
             <p className="link">Watchlist</p>
-          </a>
-          <a href="/dashboard">
+          </Link>
+          <Link to="/dashboard">
             <p className="link">Dashboard</p>
-          </a>
+          </Link>
           <div
             style={{
               display: "flex",
