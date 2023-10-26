@@ -5,6 +5,7 @@ import gradient from "../../../assets/gradient.png";
 import iPhone from "../../../assets/iphone.png";
 import { motion } from "framer-motion";
 import { RWebShare } from "react-web-share";
+import { Link } from "react-router-dom";
 
 function LandingPageComponent() {
   return (
@@ -41,9 +42,9 @@ function LandingPageComponent() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          <a href="/dashboard">
+          <Link to="/dashboard">
             <Button text="Dashboard" />
-          </a>
+          </Link>
           <RWebShare
             data={{
               text: "Crypto Dashboard made using React JS.",
